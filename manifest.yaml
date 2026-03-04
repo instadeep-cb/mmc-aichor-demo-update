@@ -11,15 +11,9 @@ builder:
 spec:
   operator: xgboost
   image: image
-  command: "python3 -u main.py --operator=xgboost --sleep=300 --tb-write=True"
+  command: "python3 -u main.py --operator=xgboost --sleep=300"
+  engineName: main-aks-dev
 
-  tensorboard:
-    enabled: true
-
-  storage:
-   attachExistingPVCs:
-    - name: mchennoufi-p-f41bb5ca8c5d42f8-kyber-pvc-33a7e00a26e24330
-      mountPoint: /mnt/mchennoufi-p-f41bb5ca8c5d42f8-kyber-pvc-33a7e00a26e24330
 
   types:
     worker:
