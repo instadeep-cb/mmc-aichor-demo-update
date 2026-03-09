@@ -4,28 +4,25 @@ kind: AIchorManifest
 apiVersion: 0.2.2
 
 builder:
-  image: image
-  context: smoke-test # smoke-test folder
-  dockerfile: ./build/Dockerfile
+  image: jax-demo
+  context: jax-demo # jax-demo folder
+  dockerfile: ./Dockerfile
 
 spec:
-  operator: jobset
-  image: image
-  command: "python3 -u main.py --operator=jobset --sleep=300 --tb-write=True"
-
+  operator: jax
+  image: jax-demo
+  command: "python3 -u /app/main.py"
   tensorboard:
     enabled: true
-
   types:
-    master:
+    Worker:
       count: 1
       resources:
         cpus: 1
-        ramRatio: 2
+        ramRatio: 1 # = 4 cpus * 4 ramRatios = 16GB
         shmSizeGB: 0
-    worker:
-      count: 1
-      resources:
-        cpus: 1
-        ramRatio: 2
-        shmSizeGB: 0
+        accelerators:
+          gpu:
+            count: 1
+            type: gpu
+            product: nvidia-tesla-t4
