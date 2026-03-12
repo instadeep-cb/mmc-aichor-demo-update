@@ -11,11 +11,10 @@ builder:
 spec:
   operator: jobset
   image: image
-  command: "python3 -u main.py --operator=jobset --sleep=3000 --tb-write=True"
-  engineName: mchennoufi-dev-aks
+  command: "python3 -u main.py --operator=jobset --sleep=300"
+  engineName: main-aks-dev
 
-  tensorboard:
-    enabled: true
+
 
   types:
     master:
