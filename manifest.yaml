@@ -15,7 +15,7 @@ spec:
 
 
   debug:
-    jupyter: false
+    jupyter: false 
 
   tensorboard:
     enabled: true
