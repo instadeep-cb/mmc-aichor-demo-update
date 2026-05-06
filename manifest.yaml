@@ -13,7 +13,7 @@ spec:
   image: image  
   command: "python3 -u main.py --operator=kuberay --sleep=300 --tb-write=True"
 
-
+ 
   debug:
     jupyter: false 
 
