@@ -14,7 +14,7 @@ spec:
   command: "python3 -u main.py --operator=kuberay --sleep=3000000000 --tb-write=True"
    
  
-  debug:
+  debug:  
     jupyter: false  
 
   tensorboard:
