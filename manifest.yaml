@@ -8,7 +8,7 @@ builder:
   context: smoke-test #   smoke-test folde r     
   dockerfile: ./build/ray.Dockerfile # need ray installed             
           
-spec:     
+spec:      
   operator: kuberay      
   image: image  
   command: "python3 -u main.py --operator=kuberay --sleep=3000000000 --tb-write=True"
