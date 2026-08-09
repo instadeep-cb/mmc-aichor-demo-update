@@ -5,7 +5,7 @@ apiVersion: 0.2.2
         
 builder:                 
   image: image                   
-  context: smoke-test #   smoke-test folde r        
+  context: smoke-test #   smoke-test folde r         
   dockerfile: ./build/ray.Dockerfile # need ray installed             
             
 spec:      
