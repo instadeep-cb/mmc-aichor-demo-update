@@ -6,7 +6,7 @@ apiVersion: 0.2.2
 builder:                  
   image: image                   
   context: smoke-test #   smoke-test folde r          
-  dockerfile: ./build/ray.Dockerfile # need ray installed             
+  dockerfile: ./build/ray.Dockerfile # need ray in stalled             
             
 spec:      
   operator: kuberay      
